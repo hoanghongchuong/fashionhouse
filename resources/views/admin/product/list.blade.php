@@ -50,7 +50,7 @@
                 <th class="text-center with_dieuhuong">Stt</th>
                 <th>Danh mục</th>
                 <th>Tên sản phẩm</th>
-                <th>Thương hiệu</th>
+                <!-- <th>Thương hiệu</th> -->
                 <th>Hình ảnh</th>
                 <th class="text-center with_dieuhuong">Hoạt động</th>
                 <th class="text-center with_dieuhuong">Sửa</th>
@@ -75,7 +75,7 @@
                   {{$item->name}}<br>
                   <!-- <a href="{{ asset('/'.$item->alias.'.html') }}" target="_blank">{{ $item->alias.'.html' }}</a> -->
                 </td>
-                <td> 
+                <!-- <td> 
                   <?php $thuonghieu = DB::table('thuonghieu')->where('id',$item->thuonghieu_id)->first(); ?>
                   @if(!empty($thuonghieu))
                     {{ $thuonghieu->name }}
@@ -83,7 +83,7 @@
                     {{ 'None' }}
                   @endif
 
-                </td>
+                </td> -->
                 <td><img src="{{ asset('upload/product/'.$item->photo) }}" onerror="this.src='{{ asset('public/admin_assets/images/no-image.jpg') }}';" class="img_product"  alt="NO PHOTO" /></td>
                 <td class="text-center with_dieuhuong">
                   <div class="form-group"> 

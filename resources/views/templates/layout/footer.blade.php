@@ -7,7 +7,7 @@
         <div class="ft-wrap">
             <p class="text-center"><a href="{{url('')}}" title=""><img src="{{asset('upload/hinhanh/'.$setting->photo)}}" alt="" title=""></a></p>
             <p class="text-center ft-promise">We promise 100% satisfaction. If you don't absolutely love it, we'll take it back!</p>
-            <div class="row justify-content-around">
+            <!-- <div class="row justify-content-around">
                 <div class="col-sm-12 col-md-3">
                     <div class="ft-content">
                         <h2 class="text-center">Sản phẩm Hè 2017</h2>
@@ -28,9 +28,9 @@
                         <p class="text-center">Những sản phẩm bán chạy và HOT nhất mùa hè 2017</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="row ft-menu">
+        <!-- <div class="row ft-menu">
             <div class="col-md-6 col-lg-3">
                 <p class="text-center">Quy chế sàn giao dịch</p>
                 <p class="text-center">Tài Khoản Giao Dịch</p>
@@ -47,7 +47,7 @@
                 <p class="text-center">Quy chế sàn giao dịch</p>
                 <p class="text-center">Tài Khoản Giao Dịch</p>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="ft-last">
         <ul class="d-flex align-items-center justify-content-center ft-social">

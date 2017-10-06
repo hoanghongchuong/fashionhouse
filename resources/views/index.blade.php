@@ -60,7 +60,22 @@
     <script>
         // new WOW().init();
     </script>
-
+    <script>
+        $('.carousel_top').owlCarousel({
+            loop:true,
+            items:1,
+            nav: false,
+            margin:20,
+            dots:true,
+            autoplay:true,
+            autoplayTimeout:4000,
+            autoplayHoverPause:true,
+            responsiveClass:true,
+            autoHeight: true,
+            /*animateOut: 'slideOutDown',
+            animateIn: 'rotateIn'*/
+        });
+    </script>
     {{ $setting->codechat }}
     {{ $setting->analytics }}
     @yield('script')

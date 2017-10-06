@@ -945,6 +945,11 @@ h4.news-wrap-r-content-time {
 }
 .pagination li{
     display: inline-block;
+    line-height: 40px;
+    width: 40px;
+    background: #ededed;
+    text-align: center;
+    border-radius: 3px;
 
 }
 .pagination li span, .pagination li a{
@@ -953,7 +958,7 @@ h4.news-wrap-r-content-time {
     color: #000;
     border: 0;
     background: transparent;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     padding: 0;
     width: 30px;
     height: 30px;
@@ -963,18 +968,19 @@ h4.news-wrap-r-content-time {
     margin-right: 5px;
 }
 .pagination li.active span, .pagination li a:hover{
-    background: #dc9916 !important;
-    color: #fff !important;
-}
-.pagination li.disabled span{
+    /*background: #dc9916 !important;*/
+    /*color: #fff !important;*/
     color: #dc9916;
 }
-.pagination li:last-child a{
-    color: #dc9916 !important;
+.pagination li.disabled span{
+    color: #333;
+}
+.pagination li:last-child a, .pagination li:last-child span{
+    /*color: #dc9916 !important;*/
     /*font-size: 22px;*/
     font-weight: normal;
 }
 .pagination li:last-child a:hover, .pagination li:first-child a:hover{
     background: none !important;
-    color: #dc9916 !important;
+    /*color: #dc9916 !important;*/
 }

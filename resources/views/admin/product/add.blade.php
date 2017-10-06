@@ -74,7 +74,7 @@
 								      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('txtAlias'); !!}</label>
 								      	@endif
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 								      	<label for="ten">Thương hiệu</label>
 								      	<select name="txtThuonghieu" class="form-control">
 
@@ -83,7 +83,7 @@
 								      		<option value="{{$thuonghieu->id}}">{{$thuonghieu->name}}</option>
 								      		@endforeach
 								      	</select>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12">

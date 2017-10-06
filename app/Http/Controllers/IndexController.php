@@ -55,11 +55,13 @@ class IndexController extends Controller {
 		$banner_sidebar = DB::table('banner_content')->where('position',5)->get();
 		$tintuc_moinhat = DB::table('news')->select()->where('status',1)->where('com','tin-tuc')->orderBy('created_at','desc')->take(12)->get();
 		$com='index';
-		$hot_news = DB::table('news')->where('status',1)->where('noibat',1)->orderBy('created_at','desc')->first();
+		$hot_news = DB::table('news')->where('status',1)->where('noibat',1)->orderBy('created_at','desc')->take(2)->get();
 		// dd($hot_news);
 		$news_product = DB::table('products')->select()->where('status',1)->orderBy('id','desc')->limit(8)->get();
 		$hot_product  = DB::table('products')->where('status',1)->where('noibat',1)->orderBy('created_at','desc')->limit(8)->get();
 		$about = DB::table('about')->first();
+		$partners = DB::table('partner')->get();
+		$cate_pro = DB::table('product_categories')->where('status',1)->orderby('id','asc')->get();
 		// Cấu hình SEO
 		$setting = Cache::get('setting');
 		$slider = DB::table('slider')->get();
@@ -69,12 +71,12 @@ class IndexController extends Controller {
 		// End cấu hình SEO
 		$img_share = asset('upload/hinhanh/'.$setting->photo);
 
-		return view('templates.index_tpl', compact('banner_danhmuc','com','khonggian_list','about','tintuc_moinhat','keyword','description','title','img_share','hot_news','news_product','hot_product','slider','banner_sidebar'));
+		return view('templates.index_tpl', compact('banner_danhmuc','com','khonggian_list','about','tintuc_moinhat','keyword','description','title','img_share','hot_news','news_product','hot_product','slider','banner_sidebar','partners','cate_pro'));
 	}
 	public function getProduct()
 	{
 		$cate_pro = DB::table('product_categories')->where('status',1)->orderby('id','asc')->get();
-		$product = DB::table('products')->select()->where('status',1)->orderby('stt','desc')->paginate(9);
+		$product = DB::table('products')->select()->where('status',1)->orderby('stt','desc')->paginate(12);
 		// dd($product_cate);
 		// $banner_danhmuc = DB::table('lienket')->select()->where('status',1)->where('com','chuyen-muc')->where('link','san-pham')->get()->first();
 		// $camnhan_khachhang = DB::table('lienket')->select()->where('status',1)->where('com','cam-nhan')->orderby('stt','asc')->get();
@@ -107,11 +109,9 @@ class IndexController extends Controller {
 			}else{
 				$title = $product_cate->name;
 			}
-			
 			$keyword = $product_cate->keyword;
 			$description = $product_cate->description;
 			$img_share = asset('upload/product/'.$product_cate->photo);
-
 			// End cấu hình SEO
 			return view('templates.productlist_tpl', compact('product','product_cate','banner_danhmuc','doitac','keyword','description','title','img_share','cate_pro','thuonghieus'));
 		}else{
@@ -187,7 +187,7 @@ class IndexController extends Controller {
 	{
 		$cateNews = DB::table('news_categories')->where('com','tin-tuc')->get();
 		// dd($cateNews);
-		$tintuc = DB::table('news')->select()->where('status',1)->where('com','tin-tuc')->orderby('id','desc')->paginate(4);
+		$tintuc = DB::table('news')->select()->where('status',1)->where('com','tin-tuc')->orderby('id','desc')->paginate(11);
 
 		$banner_danhmuc = DB::table('lienket')->select()->where('status',1)->where('com','chuyen-muc')->where('link','tin-tuc')->get()->first();
 		$tintuc_noibat = DB::table('news')->select()->where('status',1)->where('noibat','>',0)->where('com','tin-tuc')->take(12)->get();

@@ -328,7 +328,17 @@ Route::group(['middleware' =>'authen', 'prefix' => 'admin'], function(){
 
 		Route::get('delete/{id}',['as'=>'admin.bank.delete','uses'=>'Admin\BankAccountController@delete']);
 	});
+	Route::group(['prefix'=>'partners'], function(){
+		Route::get('/',['as'=>'admin.partners.index', 'uses'=>'Admin\PartnersController@index']);
 
+		Route::get('create',['as'=>'admin.partners.getCreate', 'uses'=>'Admin\PartnersController@getCreate']);
+		Route::post('create',['as'=>'admin.partners.postCreate', 'uses'=>'Admin\PartnersController@postCreate']);
+
+		Route::get('edit/{id}',['as'=>'admin.partners.getEdit', 'uses'=>'Admin\PartnersController@getEdit']);
+		Route::post('edit/{id}',['as'=>'admin.partners.postEdit', 'uses'=>'Admin\PartnersController@postEdit']);
+
+		Route::get('delete/{id}',['as'=>'admin.partners.delete','uses'=>'Admin\PartnersController@delete']);
+	});
 
 	Route::post('uploadImg', ['as'=>'admin.uploadImg' ,'uses'=>'Admin/UploadController@uploadImg']);
 	Route::post('dropzone/store', ['as'=>'dropzone.store','uses'=>'Admin/ProductController@dropzoneStore']);

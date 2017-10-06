@@ -70,7 +70,7 @@
 								      	<label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> {!! $errors->first('txtAlias'); !!}</label>
 								      	@endif
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<label for="">Thương hiệu</label>
 										<select name="txtThuonghieu" class="form-control" id="">
 											<option value="">Chọn thương hiệu</option>
@@ -82,7 +82,7 @@
 							                    </option>
 							                    @endforeach
 										</select>
-									</div>
+									</div> -->
 									
 								</div>
 								<div class="col-md-6 col-xs-12">

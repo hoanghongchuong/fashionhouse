@@ -188,6 +188,7 @@
         <!-- <li><a href="{{ asset('admin/menu?type=menu-top') }}"><i class="fa fa-circle-o"></i> <span>Quản lý menu</span></a></li> -->
         <li><a href="admin/position"><i class="fa fa-gear" aria-hidden="true"></i> <span>Vị trí quảng cáo</span></a></li>
         <li><a href="admin/banner"><i class="fa fa-gear" aria-hidden="true"></i> <span>Quản lý banner</span></a></li>
+         <li><a href="admin/partners"><i class="fa fa-envelope"></i> <span>Đối tác</span></a></li>
         <li><a href="{{ asset('admin/setting') }}"><i class="fa fa-gear" aria-hidden="true"></i> <span>Quản lý thiết lập</span></a></li>
         <!-- <li class="treeview">
           <a href="#">
