@@ -41,7 +41,8 @@
 
         <div class="row pdetail-content">
             <div class="col-sm-3 col-md-2">
-                <a href="#" title=""><img src="{{asset('public/images/2-1.jpg')}}" alt="" title=""></a>
+                <?php $banners = DB::table('banner_content')->where('position',6)->get(); ?>
+                <a href="#" title=""><img src="{{asset('upload/banner/'.$banners[2]->image)}}" alt="" title=""></a>
             </div>
             <div class="col-sm-9 col-md-7 about-content">
                 <h2 class="about-tit"><a href="about.html" title="">Đặc điểm nổi bật</a></h2>
@@ -54,8 +55,8 @@
 
             </div>
             <div class="col-sm-12 col-md-3 text-center">
-                <a href="#" title=""><img src="{{asset('public/images/2-2.jpg')}}" alt="" title=""></a>
-                <a href="#" title=""><img src="{{asset('public/images/2-3.jpg')}}" alt="" title=""></a>
+                <a href="#" title=""><img src="{{asset('upload/banner/'.$banners[1]->image)}}" alt="" title=""></a>
+                <a href="#" title=""><img src="{{asset('upload/banner/'.$banners[0]->image)}}" alt="" title=""></a>
             </div>
         </div>
     </div>

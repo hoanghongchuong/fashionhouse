@@ -20,11 +20,12 @@ $cateProducts = Cache::get('cateProducts');
 <section class="banner">
     <div class="container">
         <div class="row wrap banner-row">
+            <?php $banners = DB::table('banner_content')->where('position',1)->get(); ?>
             <div class="col-md-6 banner-item"><!-- col-sm-12  -->
-                <a href="pro.html" title=""><img src="{{asset('public/images/1-6.jpg')}}" alt="" title=""></a>
+                <a href="pro.html" title=""><img src="{{asset('upload/banner/'.$banners[0]->image)}}" alt="" title=""></a>
             </div>
             <div class="col-md-6 banner-item"><!-- col-sm-12  -->
-                <a href="pro.html" title=""><img src="{{asset('public/images/1-7.jpg')}}" alt="" title=""></a>
+                <a href="pro.html" title=""><img src="{{asset('upload/banner/'.$banners[1]->image)}}" alt="" title=""></a>
             </div>
             @foreach($cate_pro as $cate)
             <div class="col-md-4 banner-item"><!-- col-sm-12  -->
@@ -90,7 +91,7 @@ $cateProducts = Cache::get('cateProducts');
 
 <section>
     <div class="container">
-        <a href="#" title=""><img src="{{asset('public/images/1-12.jpg')}}" alt="" title=""></a>
+        <a href="#" title=""><img src="{{asset('upload/banner/'.$banners[2]->image)}}" alt="" title=""></a>
     </div>
 </section>
 
