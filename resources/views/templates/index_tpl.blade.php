@@ -76,7 +76,7 @@ $cateProducts = Cache::get('cateProducts');
                     <div class="col-sm-12 col-md-6 news-wrap-r">
                         <div class="news-wrap-r-content">
                             <h3 class="news-wrap-r-content-tit"><a href="{{url('tin-tuc/'.$hotNews->alias.'.html')}}" title="{{$hotNews->name}}">{{$hotNews->name}}</a></h3>
-                            <p class="news-wrap-r-content-time">24/04/2016</p>
+                            <p class="news-wrap-r-content-time">{{date('d/m/Y',strtotime($hotNews->created_at))}}</p>
                             <p{{$hotNews->mota}}</p>
                             <a href="{{url('tin-tuc/'.$hotNews->alias.'.html')}}" title="" class="btn news-btn">Xem ngay</a>
                         </div>

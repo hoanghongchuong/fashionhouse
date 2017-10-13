@@ -6,7 +6,7 @@
     <div class="container">
         <div class="ft-wrap">
             <p class="text-center"><a href="{{url('')}}" title=""><img src="{{asset('upload/hinhanh/'.$setting->photo)}}" alt="" title=""></a></p>
-            <p class="text-center ft-promise">We promise 100% satisfaction. If you don't absolutely love it, we'll take it back!</p>
+            <p class="text-center ft-promise">Chúng tôi luôn mang đến sự hài lòng cho khách hàng</p>
             <!-- <div class="row justify-content-around">
                 <div class="col-sm-12 col-md-3">
                     <div class="ft-content">
@@ -51,7 +51,7 @@
     </div>
     <div class="ft-last">
         <ul class="d-flex align-items-center justify-content-center ft-social">
-            <li><a href="#" title=""><img src="{{asset('public/images/i_01.png')}}" title="" alt=""></a></li>
+            <li><a href="{{$setting->facebook}}" title=""><img src="{{asset('public/images/i_01.png')}}" title="" alt=""></a></li>
             <li><a href="#" title=""><img src="{{asset('public/images/i_05.png')}}" title="" alt=""></a></li>
             <li><a href="#" title=""><img src="{{asset('public/images/i_03.png')}}" title="" alt=""></a></li>
             <li><a href="#" title=""><img src="{{asset('public/images/i_07.png')}}" title="" alt=""></a></li>
